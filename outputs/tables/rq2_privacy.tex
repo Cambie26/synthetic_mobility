@@ -1,0 +1,19 @@
+\begin{table}[ht]
+\centering
+\begin{tabular}{llll}
+\toprule
+ & VAE & WGAN-GP & Bootstrap \\
+\midrule
+Users Evaluated & 85 & 85 & 85 \\
+Balanced Accuracy & 0.515 [0.460, 0.571] & 0.474 [0.417, 0.529] & 0.692 [0.629, 0.757] \\
+AUC & 0.497 [0.433, 0.567] & 0.503 [0.432, 0.575] & 0.750 [0.673, 0.823] \\
+Maximum Advantage & 0.050 [0.032, 0.177] & 0.070 [0.020, 0.206] & 0.446 [0.350, 0.577] \\
+TPR @10\% FPR & 0.114 [0.062, 0.194] & 0.103 [0.038, 0.184] & 0.187 [0.078, 0.386] \\
+TPR @5\% FPR & 0.069 [0.039, 0.135] & 0.059 [0.023, 0.116] & 0.081 [0.018, 0.237] \\
+TPR @1\% FPR & 0.000 [0.000, 0.087] & 0.030 [0.010, 0.070] & 0.013 [0.002, 0.074] \\
+Near-copy Rate & 0.009 $\pm$ 0.001 & 0.010 $\pm$ 0.002 & 1.000 $\pm$ 0.000 \\
+\bottomrule
+\end{tabular}
+\caption{RQ2 Privacy Metrics. MIA-associated metrics are pooled across seed runs and reported with 95\% cluster-bootstrap confidence intervals. Users Evaluated denotes the number of distinct users contributing to each pooled estimate. Near-copy Rate is reported as mean $\pm$ standard deviation over seed runs.}
+\label{tab:rq2_privacy}
+\end{table}

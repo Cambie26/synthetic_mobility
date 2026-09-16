@@ -1,0 +1,12 @@
+,VAE,WGAN-GP,Bootstrap
+Origin JS Distance,0.852 ± 0.007,0.846 ± 0.008,0.154 ± 0.068
+Destination JS Distance,0.851 ± 0.003,0.843 ± 0.009,0.159 ± 0.066
+OD-flow JS Distance,0.672 ± 0.027,0.637 ± 0.035,0.308 ± 0.077
+OD-flow Coverage,0.427 ± 0.018,0.372 ± 0.013,0.673 ± 0.050
+Hour-of-day JS Distance,0.154 ± 0.021,0.149 ± 0.023,0.058 ± 0.024
+Day-of-week JS Distance,0.116 ± 0.010,0.117 ± 0.014,0.013 ± 0.006
+Correlation Difference,0.071 ± 0.013,0.052 ± 0.019,0.030 ± 0.010
+Wasserstein Distance,0.167 ± 0.002,0.120 ± 0.005,0.018 ± 0.004
+Spread Ratio,0.804 ± 0.011,0.908 ± 0.024,1.007 ± 0.012
+Kolmogorov-Smirnov Distance,0.166 ± 0.012,0.157 ± 0.014,0.219 ± 0.017
+Forecast Task (TSTR),0.271 ± 0.045,0.251 ± 0.038,0.987 ± 0.042

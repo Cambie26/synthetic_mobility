@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the thesis below."
+title: "Synthetic Mobility Data: A User-Level Membership Inference Assessment"
+abstract: >-
+  Code evaluating the privacy-utility trade-off of deep generative models
+  (VAE, WGAN-GP) trained on origin-destination trips derived from the GeoLife
+  GPS dataset, with a user-level membership inference attack measuring privacy
+  leakage and a bootstrap resampling generator as a positive control.
+type: software
+authors:
+  - family-names: Gray
+    given-names: Campbell
+license: MIT
+repository-code: "https://github.com/Cambie26/synthetic_mobility"
+keywords:
+  - synthetic data
+  - human mobility
+  - membership inference
+  - differential privacy
+  - generative models
+preferred-citation:
+  type: thesis
+  title: "Synthetic Mobility Data: A User-Level Membership Inference Assessment"
+  authors:
+    - family-names: Gray
+      given-names: Campbell
+  institution:
+    name: "Universitat Pompeu Fabra"
+  thesis-type: "Master's thesis, Master in Intelligent Interactive Systems"
+  year: 2026
+  month: 7

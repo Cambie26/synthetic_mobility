@@ -1,0 +1,19 @@
+# Experiments were run on Google Colab (Python 3.12).
+# Versions are unpinned except h3, where the v4 API is required.
+
+numpy
+pandas
+scipy
+scikit-learn
+torch
+h3>=4,<5
+matplotlib
+seaborn
+geopandas
+shapely
+joblib
+tqdm
+
+# Used only by the preprocessing and exploration notebooks (00, 04)
+folium
+contextily
