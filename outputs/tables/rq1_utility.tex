@@ -1,0 +1,22 @@
+\begin{table}[ht]
+\centering
+\begin{tabular}{llll}
+\toprule
+ & VAE & WGAN-GP & Bootstrap \\
+\midrule
+Origin JS Distance & 0.852 $\pm$ 0.007 & 0.846 $\pm$ 0.008 & 0.154 $\pm$ 0.068 \\
+Destination JS Distance & 0.851 $\pm$ 0.003 & 0.843 $\pm$ 0.009 & 0.159 $\pm$ 0.066 \\
+OD-flow JS Distance & 0.672 $\pm$ 0.027 & 0.637 $\pm$ 0.035 & 0.308 $\pm$ 0.077 \\
+OD-flow Coverage & 0.427 $\pm$ 0.018 & 0.372 $\pm$ 0.013 & 0.673 $\pm$ 0.050 \\
+Hour-of-day JS Distance & 0.154 $\pm$ 0.021 & 0.149 $\pm$ 0.023 & 0.058 $\pm$ 0.024 \\
+Day-of-week JS Distance & 0.116 $\pm$ 0.010 & 0.117 $\pm$ 0.014 & 0.013 $\pm$ 0.006 \\
+Correlation Difference & 0.071 $\pm$ 0.013 & 0.052 $\pm$ 0.019 & 0.030 $\pm$ 0.010 \\
+Wasserstein Distance & 0.167 $\pm$ 0.002 & 0.120 $\pm$ 0.005 & 0.018 $\pm$ 0.004 \\
+Spread Ratio & 0.804 $\pm$ 0.011 & 0.908 $\pm$ 0.024 & 1.007 $\pm$ 0.012 \\
+Kolmogorov-Smirnov Distance & 0.166 $\pm$ 0.012 & 0.157 $\pm$ 0.014 & 0.219 $\pm$ 0.017 \\
+Forecast Task (TSTR) & 0.271 $\pm$ 0.045 & 0.251 $\pm$ 0.038 & 0.987 $\pm$ 0.042 \\
+\bottomrule
+\end{tabular}
+\caption{RQ1 Utility Metrics (mean $\pm$ standard deviation over five seed runs). JS Distance denotes the Jensen-Shannon distance between the corresponding real and synthetic marginal distributions. Mean Wasserstein Distance is computed on features standardised using statistics from the real data}
+\label{tab:rq1_utility}
+\end{table}

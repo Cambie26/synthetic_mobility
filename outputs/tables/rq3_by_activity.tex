@@ -1,0 +1,20 @@
+\begin{table}[ht]
+\centering
+\begin{tabular}{llllll}
+\toprule
+Model & Activity Group & Users & AUC & TPR @ 10\% FPR & Near-copy Rate \\
+\midrule
+VAE & Low (10--20) & 28 & 0.580 [0.440, 0.716] & 0.186 [0.057, 0.379] & 0.004 $\pm$ 0.001 \\
+VAE & Medium (21--63) & 29 & 0.530 [0.460, 0.610] & 0.263 [0.113, 0.362] & 0.005 $\pm$ 0.001 \\
+VAE & High (64+) & 28 & 0.392 [0.273, 0.517] & 0.102 [0.000, 0.193] & 0.008 $\pm$ 0.001 \\
+WGAN-GP & Low (10--20) & 28 & 0.578 [0.468, 0.692] & 0.220 [0.024, 0.400] & 0.006 $\pm$ 0.002 \\
+WGAN-GP & Medium (21--63) & 29 & 0.490 [0.382, 0.598] & 0.193 [0.029, 0.327] & 0.007 $\pm$ 0.002 \\
+WGAN-GP & High (64+) & 28 & 0.460 [0.320, 0.612] & 0.068 [0.016, 0.196] & 0.010 $\pm$ 0.002 \\
+Bootstrap & Low (10--20) & 28 & 0.729 [0.618, 0.858] & 0.237 [0.019, 0.586] & 0.483 $\pm$ 0.040 \\
+Bootstrap & Medium (21--63) & 29 & 0.770 [0.652, 0.874] & 0.316 [0.036, 0.569] & 0.613 $\pm$ 0.011 \\
+Bootstrap & High (64+) & 28 & 0.746 [0.582, 0.895] & 0.237 [0.038, 0.623] & 0.935 $\pm$ 0.025 \\
+\bottomrule
+\end{tabular}
+\caption{RQ3 Privacy by Activity Group. MIA-associated metrics are pooled within each activity group and reported with 95\% cluster-bootstrap confidence intervals. Users denotes the number of distinct users contributing to each pooled estimate. Near-copy Rate is reported as mean $\pm$ standard deviation over seed runs.}
+\label{tab:rq3_by_activity}
+\end{table}
