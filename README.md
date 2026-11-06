@@ -1,5 +1,3 @@
-# synthetic_mobility
-
 # Synthetic Mobility Data: A User-Level Membership Inference Assessment
 
 Code for my MSc thesis evaluating the **privacy–utility trade-off of deep generative models** (VAE, WGAN-GP) trained on origin–destination (OD) trips derived from the GeoLife GPS dataset (Beijing). A user-level **membership inference attack (MIA)** measures privacy leakage, and a bootstrap resampling generator is used as a positive control.
@@ -111,10 +109,11 @@ User ID is never a model input.
 ├── outputs/
 │   ├── figures/                        # thesis figures (PDF)
 │   ├── tables/                         # aggregate results (CSV + LaTeX)
-│   ├── eval_log_v4.json                # per-seed utility + distance-privacy metrics
-│   └── mia_log_v4.json                 # per-seed MIA metrics (overall and by activity group)
+│   └── eval_log_v4.json                # per-seed utility + distance-privacy metrics
 └── thesis/
-    └── UPF_Thesis.pdf
+    ├── UPF_Thesis.pdf
+    ├── thesis_presentation.pptx
+    └── thesis_presentation.pdf
 ```
 
 The notebooks run from the repository root and use paths relative to it (`src/`, `artifacts_v4/`, `outputs/`). Module and artefact names are kept exactly as they were when the thesis results were produced.
@@ -160,10 +159,12 @@ Run the notebooks in order from the repository root. The saved notebook outputs 
 | Step | Notebook | Reads | Writes |
 |---|---|---|---|
 | 0 | `00_preprocess_geolife.ipynb` | Raw GeoLife trajectories + GADM boundary | `od_trips_20260410_input.csv` (7,739 trips, 154 users) |
-| 1 | `01_generate_and_attack.ipynb` | OD trips CSV | For each model and seed: `artifacts_v4/splits/`, synthetic trips, attack features, attack model and per-user MIA scores. It also writes `outputs/mia_log_v4.json`. |
+| 1 | `01_generate_and_attack.ipynb` | OD trips CSV | For each model and seed: `artifacts_v4/splits/`, synthetic trips, attack features, attack model and per-user MIA scores. (These per-user outputs are not published.) |
 | 2 | `02_evaluate.ipynb` | OD trips CSV + `artifacts_v4/` | Per-seed utility and distance-privacy metrics, including by activity group. It also writes `outputs/eval_log_v4.json`. |
 | 3 | `03_figures_tables.ipynb` | `artifacts_v4/` + eval log (no recomputation) | `outputs/tables/*.csv|.tex` and `outputs/figures/*.pdf` |
 | — | `04_exploration_hyperparameters.ipynb` | OD trips CSV | EDA, β sweep and training curves. It is not required for the main results. |
+
+The final MIA results (pooled over seeds, overall and by activity group) are published only as aggregates: in `outputs/tables/rq2_privacy.*` and `outputs/tables/rq3_by_activity.*`, and in the saved outputs of `02_evaluate.ipynb` and `03_figures_tables.ipynb`.
 
 Step 1 is the expensive one: 3 generators plus 10 shadow generators per model, across 5 seeds.
 
