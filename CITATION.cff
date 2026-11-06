@@ -16,7 +16,6 @@ keywords:
   - synthetic data
   - human mobility
   - membership inference
-  - differential privacy
   - generative models
 preferred-citation:
   type: thesis
